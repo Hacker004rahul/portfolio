@@ -756,6 +756,8 @@ body.night-mode .contact a {
 /* Light Mode */
 /* Light Mode */
 #portfolio {
+/* Light Mode */
+#portfolio {
     padding: 60px 20px;
     background-color: #fff;
 }
@@ -807,39 +809,43 @@ body.night-mode .contact a {
 }
 
 /* Dark Mode */
-body[data-theme='dark'] #portfolio {
+[data-theme='dark'] #portfolio {
     background-color: #1e1e1e;
 }
 
-body[data-theme='dark'] #portfolio .content {
+[data-theme='dark'] #portfolio .content {
     color: #e0e0e0;
 }
 
-body[data-theme='dark'] #portfolio h2 {
+[data-theme='dark'] #portfolio h2 {
     color: #e0e0e0; /* Default color for dark mode */
 }
 
-body[data-theme='dark'] #portfolio h2:hover {
+[data-theme='dark'] #portfolio h2:hover {
     color: #7d2ae8; /* Hover color for dark mode */
 }
 
-body[data-theme='dark'] .project {
+[data-theme='dark'] .project {
     margin-bottom: 30px;
 }
 
-body[data-theme='dark'] .project h3 {
+[data-theme='dark'] .project h3 {
     color: #e0e0e0; /* Color for dark mode */
 }
 
-body[data-theme='dark'] .project h3:hover {
+[data-theme='dark'] .project h3:hover {
     color: #5c1db6;
 }
 
-body[data-theme='dark'] .project p {
+[data-theme='dark'] .project p {
     color: #e0e0e0; /* Default color for dark mode */
 }
 
-body[data-theme='dark'] .project ul li {
+[data-theme='dark'] .project ul {
+    color: #e0e0e0; /* Color for dark mode */
+}
+
+[data-theme='dark'] .project ul li {
     color: #e0e0e0; /* Color for dark mode */
 }
 
