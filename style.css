@@ -752,10 +752,7 @@ body.night-mode .contact a {
 /* Default light mode styles for #projects */
 /* Light Mode */
 /* Light Mode */
-/* Light Mode */
-/* Light Mode */
-/* Light Mode */
-/* Light Mode */
+/* Light Mode (Default) */
 #portfolio {
     padding: 60px 20px;
     background-color: #fff; /* Light mode background color */
@@ -784,11 +781,8 @@ body.night-mode .contact a {
 
 .project h3 {
     font-size: 1.8em;
+    color: #333; /* Default color for project headings */
     margin-bottom: 10px;
-}
-
-.project h3:hover {
-    color: #5c1db6; /* Hover color for project headings */
 }
 
 .project p {
@@ -807,7 +801,6 @@ body.night-mode .contact a {
     margin-bottom: 10px;
 }
 
-/* Hover effect for job titles and organizations */
 .experience h3, .experience p strong {
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
@@ -845,23 +838,14 @@ body.night-mode .contact a {
     color: #e0e0e0; /* Color for project headings in dark mode */
 }
 
-[data-theme='dark'] .project h3:hover {
-    color: #5c1db6; /* Hover color for project headings in dark mode */
-}
-
 [data-theme='dark'] .project p {
     color: #e0e0e0; /* Default color for paragraphs in dark mode */
-}
-
-[data-theme='dark'] .project ul {
-    color: #e0e0e0; /* Color for unordered list in dark mode */
 }
 
 [data-theme='dark'] .project ul li {
     color: #e0e0e0; /* Color for list items in dark mode */
 }
 
-/* Hover effect for job titles and organizations in dark mode */
 [data-theme='dark'] .experience h3:hover,
 [data-theme='dark'] .experience p strong:hover {
     background-color: #333; /* Dark background on hover */
@@ -870,8 +854,12 @@ body.night-mode .contact a {
     padding: 0 5px; /* Add some padding for visual effect */
 }
 
-
-
+/* Responsive Adjustments for Projects Section */
+@media (max-width: 768px) {
+    #projects h2 {
+        font-size: 2em;
+    }
+}
   * {
     margin: 0;
     padding: 0;
