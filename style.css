@@ -937,6 +937,7 @@ body.night-mode .contact a {
       position: unset;
     }
   }
+/* Projects Section */
 #projects {
   padding: 60px 20px;
 }
@@ -964,23 +965,30 @@ body.night-mode .contact a {
   font-size: 1.8em;
   margin-bottom: 10px;
   color: #000; /* Light mode text color */
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .project-card h3:hover {
   color: #7d2ae8; /* Hover color */
+  background-color: #000; /* Light mode background on hover */
 }
 
 .project-card p {
   color: #000; /* Light mode text color */
+  transition: color 0.3s ease-in-out;
+}
+
+.project-card p:hover {
+  color: #7d2ae8; /* Hover color */
 }
 
 /* Dark Mode */
 body.night-mode #projects {
-  background-color: #1e1e1e; /* Dark mode background color */
+  background-color: #000; /* Dark mode background color */
 }
 
 body.night-mode #projects h2 {
-  color: #e0e0e0; /* Dark mode text color */
+  color: #000; /* Dark mode text color */
 }
 
 body.night-mode #projects h2:hover {
@@ -989,17 +997,23 @@ body.night-mode #projects h2:hover {
 
 body.night-mode .project-card {
   background-color: #2e2e2e; /* Dark mode card background color */
-  color: #e0e0e0; /* Dark mode text color */
+  color: #000; /* Dark mode text color */
 }
 
 body.night-mode .project-card h3 {
-  color: #e0e0e0; /* Dark mode text color */
+  color: #000; /* Dark mode text color */
 }
 
 body.night-mode .project-card h3:hover {
   color: #7d2ae8; /* Hover color */
+  background-color: #333; /* Dark mode background on hover */
 }
 
 body.night-mode .project-card p {
-  color: #b3b3b3; /* Dark mode paragraph text color */
+  color: 000; /* Dark mode paragraph text color */
 }
+
+body.night-mode .project-card p:hover {
+  color: #7d2ae8; /* Hover color */
+}
+
