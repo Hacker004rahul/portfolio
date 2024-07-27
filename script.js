@@ -1,5 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Night Mode Initialization
+/ Night Mode Initialization
     const nightModeToggle = document.getElementById('nightModeToggle');
     const isNightMode = localStorage.getItem('nightMode') === 'true';
 
@@ -292,5 +291,3 @@ document.addEventListener("DOMContentLoaded", function() {
         return Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2);
     }
 })();
-
-    
