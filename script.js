@@ -11,22 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.toggle('night-mode');
         localStorage.setItem('nightMode', document.body.classList.contains('night-mode'));
     });
-     const typingElement = document.getElementById('typing-effect');
-    const text = typingElement.getAttribute('data-text');
-    let i = 0;
-
-    function typeWriter() {
-        if (i < text.length) {
-            typingElement.textContent += text.charAt(i);
-            i++;
-            setTimeout(typeWriter, 100); // Adjust typing speed here (in ms)
-        }
-    }
-
-    typingElement.textContent = ""; // Clear the initial content
-    typeWriter();
-});
-
+ 
     // Create Scene for 3D Model
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -290,3 +275,18 @@ document.addEventListener('DOMContentLoaded', () => {
         return Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2);
     }
 })();
+    const typingElement = document.getElementById('typing-effect');
+    const text = typingElement.getAttribute('data-text');
+    let i = 0;
+
+    function typeWriter() {
+        if (i < text.length) {
+            typingElement.textContent += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, 100); // Adjust typing speed here (in ms)
+        }
+    }
+
+    typingElement.textContent = ""; // Clear the initial content
+    typeWriter();
+});
