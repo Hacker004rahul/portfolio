@@ -820,10 +820,12 @@ body.night-mode #projects h2 {
 
 body.night-mode #projects h2:hover {
     color: #7d2ae8; /* Night mode hover color */
+  transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
 }
 
-body.night-mode .project h3 {
+body.night-mode .project h3:hover {
     color: #7d2ae8; /* Night mode color */
+  transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
 }
 
 body.night-mode .project p {
