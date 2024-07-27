@@ -938,8 +938,10 @@ body.night-mode .contact a {
     }
   }
 /* Projects Section */
+/* Projects Section */
 #projects {
   padding: 60px 20px;
+  text-align: center; /* Center the text within the section */
 }
 
 #projects h2 {
@@ -948,17 +950,16 @@ body.night-mode .contact a {
   color: #000; /* Light mode text color */
 }
 
-#projects h2:hover {
-  color: #7d2ae8; /* Hover color */
-}
-
 .project-card {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
+  margin: 0 auto 20px; /* Center the card and add margin */
   padding: 20px;
+  width: 80%; /* Adjust width as needed to fit your layout */
+  max-width: 800px; /* Set a maximum width for larger screens */
   color: #000; /* Light mode text color */
+  text-align: left; /* Align text inside the card to the left */
 }
 
 .project-card h3 {
@@ -970,7 +971,7 @@ body.night-mode .contact a {
 
 .project-card h3:hover {
   color: #7d2ae8; /* Hover color */
-  background-color: #000; /* Light mode background on hover */
+  background-color: #f0f0f0; /* Light mode background on hover */
 }
 
 .project-card p {
@@ -984,11 +985,11 @@ body.night-mode .contact a {
 
 /* Dark Mode */
 body.night-mode #projects {
-  background-color: #000; /* Dark mode background color */
+  background-color: #1e1e1e; /* Dark mode background color */
 }
 
 body.night-mode #projects h2 {
-  color: #000; /* Dark mode text color */
+  color: #fff; /* Dark mode text color */
 }
 
 body.night-mode #projects h2:hover {
@@ -997,11 +998,11 @@ body.night-mode #projects h2:hover {
 
 body.night-mode .project-card {
   background-color: #2e2e2e; /* Dark mode card background color */
-  color: #000; /* Dark mode text color */
+  color: #fff; /* Dark mode text color */
 }
 
 body.night-mode .project-card h3 {
-  color: #000; /* Dark mode text color */
+  color: #fff; /* Dark mode text color */
 }
 
 body.night-mode .project-card h3:hover {
@@ -1010,10 +1011,9 @@ body.night-mode .project-card h3:hover {
 }
 
 body.night-mode .project-card p {
-  color: 000; /* Dark mode paragraph text color */
+  color: #b3b3b3; /* Dark mode paragraph text color */
 }
 
 body.night-mode .project-card p:hover {
   color: #7d2ae8; /* Hover color */
 }
-
