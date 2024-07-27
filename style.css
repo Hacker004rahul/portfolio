@@ -937,73 +937,85 @@ body.night-mode .contact a {
       position: unset;
     }
   }
-/* Projects Section */
-#projects {
+/* Common Styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Light Mode */
+#education, #experience, #projects {
   padding: 60px 20px;
   background-color: #f4f4f4; /* Light mode background color */
-  text-align: center; /* Center the content */
+  color: #000; /* Light mode text color */
 }
 
-#projects h2 {
+#education h2, #experience h2, #projects h2 {
   font-size: 2.5em;
   margin-bottom: 30px;
-  color: #000; /* Black in day mode */
 }
 
-.project-card {
-  background-color: #fff; /* Light mode background color */
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  padding: 20px;
-  text-align: center; /* Center the content */
+#education p, #experience p, #projects p {
+  color: #000; /* Light mode text color */
 }
 
-.project-card h3 {
-  font-size: 1.8em;
-  margin-bottom: 10px;
-  color: #000; /* Black in day mode */
+#education h3, #experience h3, #projects h3 {
+  color: #000; /* Light mode headings color */
 }
 
-.project-card p {
-  color: #000; /* Black in day mode */
-}
-
+/* Dark Mode */
+body[data-theme='dark'] #education,
+body[data-theme='dark'] #experience,
 body[data-theme='dark'] #projects {
   background-color: #1e1e1e; /* Dark mode background color */
+  color: #fff; /* Dark mode text color */
 }
 
+body[data-theme='dark'] #education h2,
+body[data-theme='dark'] #experience h2,
 body[data-theme='dark'] #projects h2 {
-  color: #fff; /* White in night mode */
+  color: #fff; /* Dark mode headings color */
 }
 
-body[data-theme='dark'] .project-card {
-  background-color: #2e2e2e; /* Dark mode background color */
-  color: #fff; /* White text color in night mode */
+body[data-theme='dark'] #education p,
+body[data-theme='dark'] #experience p,
+body[data-theme='dark'] #projects p {
+  color: #fff; /* Dark mode text color */
 }
 
-body[data-theme='dark'] .project-card h3 {
-  color: #fff; /* White in night mode */
-}
-
-body[data-theme='dark'] .project-card p {
-  color: #fff; /* White in night mode */
-}
-
-body[data-theme='dark'] .project-card:hover {
+body[data-theme='dark'] #projects .project-card:hover,
+body[data-theme='dark'] .experience h3:hover,
+body[data-theme='dark'] .experience p strong:hover {
   background-color: #333; /* Darker background on hover in night mode */
   color: #7d2ae8; /* Color change on hover in night mode */
 }
 
-.project-card:hover {
+#projects .project-card:hover,
+#experience h3:hover,
+#experience p strong:hover {
   background-color: #f0f0f0; /* Light background on hover in day mode */
   color: #7d2ae8; /* Color change on hover in day mode */
 }
 
-/* Responsive Adjustments for Projects Section */
-@media (max-width: 768px) {
-  #projects h2 {
-    font-size: 2em;
-  }
+/* Centering Content */
+#education, #experience, #projects {
+  text-align: center; /* Center the text */
+}
+
+#projects .project-card {
+  text-align: center; /* Center the text inside the card */
+  background-color: #fff; /* Light mode background color */
+}
+
+body[data-theme='dark'] #projects .project-card {
+  background-color: #2e2e2e; /* Dark mode background color */
+  color: #fff; /* Dark mode text color */
+}
+
+body[data-theme='dark'] #projects .project-card h3,
+body[data-theme='dark'] #projects .project-card p {
+  color: #fff; /* Dark mode text color */
 }
 
