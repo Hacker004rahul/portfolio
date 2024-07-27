@@ -823,7 +823,7 @@ body.night-mode #projects h2:hover {
 }
 
 body.night-mode .project h3 {
-    color: #ddd; /* Night mode color */
+    color: #7d2ae8; /* Night mode color */
 }
 
 body.night-mode .project p {
