@@ -752,93 +752,87 @@ body.night-mode .contact a {
     }
 }
 /* Default light mode styles for #projects */
-#projects {
+/* Light Mode */
+#portfolio {
     padding: 60px 20px;
     background-color: #fff;
 }
 
-#projects .content {
+#portfolio .content {
     max-width: 800px;
     color: #000;
     margin: 0 auto;
 }
 
-#projects h2 {
+#portfolio h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: #000; /* Light mode color */
+    color: #000; /* Default color */
     transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
 }
 
-/* Hover effect */
-#projects h2:hover {
-    color: #7d2ae8; /* Light mode hover color */
+#portfolio h2:hover {
+    color: #7d2ae8; /* Change color on hover */
 }
 
-.project {
-    margin-bottom: 30px;
-}
-
-.project h3 {
-    color: #000; /* Light mode color */
-    transition: color 0.3s ease-in-out; /* Smooth color transition */
-}
-
-.project h3:hover {
-    color: #7d2ae8; /* Light mode hover color */
+.experience h3:hover {
+    color: #5c1db6;
     font-size: 1.8em;
     margin-bottom: 10px;
 }
 
-.project p {
+.experience p, .experience ul li {
     font-size: 1.2em;
     line-height: 1.6;
     color: #000;
 }
 
-.project ul {
+.experience ul {
     list-style-type: disc;
     padding-left: 20px;
 }
 
-.project ul li {
-    font-size: 1.2em;
+.experience ul li {
     margin-bottom: 10px;
 }
 
-/* Night mode styles for #projects */
-body.night-mode #projects {
-    background-color: #1c1c1c; /* Night mode background color */
+/* Dark Mode */
+body[data-theme='dark'] #portfolio {
+    background-color: #1e1e1e;
 }
 
-body.night-mode #projects .content {
-    color: #ddd; /* Night mode text color */
+body[data-theme='dark'] #portfolio .content {
+    color: #e0e0e0;
 }
 
-body.night-mode #projects h2 {
-    color: #ddd; /* Night mode color */
+body[data-theme='dark'] #portfolio h2 {
+    color: #e0e0e0; /* Default color for dark mode */
 }
 
-body.night-mode #projects h2:hover {
-    color: #7d2ae8; /* Night mode hover color */
+body[data-theme='dark'] #portfolio h2:hover {
+    color: #7d2ae8; /* Hover color for dark mode */
 }
 
-body.night-mode .project h3 {
-    color: #ddd; /* Night mode color */
-    transition: color 0.3s ease-in-out; /* Smooth color transition */
+body[data-theme='dark'] .experience h3:hover {
+    color: #5c1db6;
+    font-size: 1.8em;
+    margin-bottom: 10px;
 }
 
-body.night-mode .project h3:hover {
-    color: #7d2ae8; /* Night mode hover color */
+body[data-theme='dark'] .experience p, 
+body[data-theme='dark'] .experience ul li {
+    color: #e0e0e0;
 }
 
-body.night-mode .project p {
-    color: #ddd;
+body[data-theme='dark'] .experience ul {
+    list-style-type: disc;
+    padding-left: 20px;
 }
 
-body.night-mode .project ul li {
-    color: #ddd;
+body[data-theme='dark'] .experience ul li {
+    margin-bottom: 10px;
 }
+
   * {
     margin: 0;
     padding: 0;
