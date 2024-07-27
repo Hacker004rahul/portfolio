@@ -757,6 +757,7 @@ body.night-mode .contact a {
 /* Light Mode */
 /* Light Mode */
 /* Light Mode */
+/* Light Mode */
 #portfolio {
     padding: 60px 20px;
     background-color: #fff; /* Light mode background color */
@@ -808,6 +809,19 @@ body.night-mode .contact a {
     margin-bottom: 10px;
 }
 
+/* Hover effect for job titles and organizations */
+.experience h3, .experience p strong {
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.experience h3:hover,
+.experience p strong:hover {
+    background-color: #f0f0f0; /* Light background on hover */
+    color: #7d2ae8; /* Text color on hover */
+    cursor: pointer; /* Change cursor to pointer */
+    padding: 0 5px; /* Add some padding for visual effect */
+}
+
 /* Dark Mode */
 [data-theme='dark'] #portfolio {
     background-color: #1e1e1e; /* Dark mode background color */
@@ -848,6 +862,16 @@ body.night-mode .contact a {
 [data-theme='dark'] .project ul li {
     color: #e0e0e0; /* Color for list items in dark mode */
 }
+
+/* Hover effect for job titles and organizations in dark mode */
+[data-theme='dark'] .experience h3:hover,
+[data-theme='dark'] .experience p strong:hover {
+    background-color: #333; /* Dark background on hover */
+    color: #7d2ae8; /* Text color on hover */
+    cursor: pointer; /* Change cursor to pointer */
+    padding: 0 5px; /* Add some padding for visual effect */
+}
+
 
 
   * {
