@@ -781,10 +781,11 @@ body.night-mode .contact a {
 
 .project h3 {
     color: #000; /* Light mode color */
+    transition: color 0.3s ease-in-out; /* Smooth color transition */
 }
 
 .project h3:hover {
-    color: #5c1db6; /* Light mode hover color */
+    color: #7d2ae8; /* Light mode hover color */
     font-size: 1.8em;
     margin-bottom: 10px;
 }
@@ -820,12 +821,15 @@ body.night-mode #projects h2 {
 
 body.night-mode #projects h2:hover {
     color: #7d2ae8; /* Night mode hover color */
-  transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+}
+
+body.night-mode .project h3 {
+    color: #ddd; /* Night mode color */
+    transition: color 0.3s ease-in-out; /* Smooth color transition */
 }
 
 body.night-mode .project h3:hover {
-    color: #7d2ae8; /* Night mode color */
-  transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+    color: #7d2ae8; /* Night mode hover color */
 }
 
 body.night-mode .project p {
@@ -835,7 +839,6 @@ body.night-mode .project p {
 body.night-mode .project ul li {
     color: #ddd;
 }
-
   * {
     margin: 0;
     padding: 0;
