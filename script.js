@@ -11,6 +11,21 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.toggle('night-mode');
         localStorage.setItem('nightMode', document.body.classList.contains('night-mode'));
     });
+     const typingElement = document.getElementById('typing-effect');
+    const text = typingElement.getAttribute('data-text');
+    let i = 0;
+
+    function typeWriter() {
+        if (i < text.length) {
+            typingElement.textContent += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, 100); // Adjust typing speed here (in ms)
+        }
+    }
+
+    typingElement.textContent = ""; // Clear the initial content
+    typeWriter();
+});
 
     // Create Scene for 3D Model
     const scene = new THREE.Scene();
@@ -91,24 +106,6 @@ document.addEventListener('DOMContentLoaded', () => {
         alert('Thank you for your message! We will get back to you soon.');
         form.reset();
     });
-
-    // Typing Effect
-    const typingElement = document.getElementById('typing-effect');
-    const text = typingElement.getAttribute('data-text');
-    let i = 0;
-
-    function typeWriter() {
-        if (i < text.length) {
-            typingElement.textContent += text.charAt(i);
-            i++;
-            setTimeout(typeWriter, 100); // Adjust typing speed here (in ms)
-        }
-    }
-
-    typingElement.textContent = ""; // Clear the initial content
-    typeWriter();
-});
-
 // Particle Animation
 (function() {
     var width, height, largeHeader, canvas, ctx, points, target, animateHeader = true;
