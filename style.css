@@ -757,44 +757,81 @@ body.night-mode .contact a {
 }
 
 #projects .content {
-max-width: 800px;
-color: #000;
-margin: 0 auto;
-  }
+    max-width: 800px;
+    color: #000;
+    margin: 0 auto;
+}
 
 #projects h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: #fff /* Default color */
+    color: #000; /* Default color for light mode */
     transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
-  }
-  
-  /* Hover effect */
-  #projects h2:hover {
+}
+
+/* Hover effect */
+#projects h2:hover {
     color: #7d2ae8; /* Change color on hover */
-  }
-  .project {
+}
+
+.project {
     margin-bottom: 30px;
-  }
-  
-  .project h3:hover {
+}
+
+.project h3 {
+    color: #000; /* Default color for light mode */
+}
+
+.project h3:hover {
     color: #5c1db6;
     font-size: 1.8em;
     margin-bottom: 10px;
-  }
-  .project p {
+}
+
+.project p {
     font-size: 1.2em;
     line-height: 1.6;
-    color: #000000;
-  }
-  .project ul {
+    color: #000;
+}
+
+.project ul {
     list-style-type: disc;
     padding-left: 20px;
-  }
-  .project ul li {
+}
+
+.project ul li {
     font-size: 1.2em;
     margin-bottom: 10px;
-  }
+}
+
+/* Night mode styles for #projects */
+body.night-mode #projects {
+    background-color: #333;
+}
+
+body.night-mode #projects .content {
+    color: #ddd;
+}
+
+body.night-mode #projects h2 {
+    color: #ddd; /* Night mode color */
+}
+
+body.night-mode #projects h2:hover {
+    color: #d8a3ff; /* Night mode hover color */
+}
+
+body.night-mode .project h3 {
+    color: #ddd; /* Night mode color */
+}
+
+body.night-mode .project p {
+    color: #ddd;
+}
+
+body.night-mode .project ul li {
+    color: #ddd;
+}
   * {
     margin: 0;
     padding: 0;
