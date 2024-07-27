@@ -937,3 +937,69 @@ body.night-mode .contact a {
       position: unset;
     }
   }
+#projects {
+  padding: 60px 20px;
+}
+
+#projects h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #000; /* Light mode text color */
+}
+
+#projects h2:hover {
+  color: #7d2ae8; /* Hover color */
+}
+
+.project-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+  color: #000; /* Light mode text color */
+}
+
+.project-card h3 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: #000; /* Light mode text color */
+}
+
+.project-card h3:hover {
+  color: #7d2ae8; /* Hover color */
+}
+
+.project-card p {
+  color: #000; /* Light mode text color */
+}
+
+/* Dark Mode */
+body.night-mode #projects {
+  background-color: #1e1e1e; /* Dark mode background color */
+}
+
+body.night-mode #projects h2 {
+  color: #e0e0e0; /* Dark mode text color */
+}
+
+body.night-mode #projects h2:hover {
+  color: #7d2ae8; /* Hover color */
+}
+
+body.night-mode .project-card {
+  background-color: #2e2e2e; /* Dark mode card background color */
+  color: #e0e0e0; /* Dark mode text color */
+}
+
+body.night-mode .project-card h3 {
+  color: #e0e0e0; /* Dark mode text color */
+}
+
+body.night-mode .project-card h3:hover {
+  color: #7d2ae8; /* Hover color */
+}
+
+body.night-mode .project-card p {
+  color: #b3b3b3; /* Dark mode paragraph text color */
+}
