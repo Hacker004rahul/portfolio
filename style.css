@@ -753,6 +753,7 @@ body.night-mode .contact a {
 }
 /* Default light mode styles for #projects */
 /* Light Mode */
+/* Light Mode */
 #portfolio {
     padding: 60px 20px;
     background-color: #fff;
@@ -775,24 +776,29 @@ body.night-mode .contact a {
     color: #7d2ae8; /* Change color on hover */
 }
 
-.experience h3:hover {
+.project {
+    margin-bottom: 30px;
+}
+
+.project h3:hover {
     color: #5c1db6;
     font-size: 1.8em;
     margin-bottom: 10px;
 }
 
-.experience p, .experience ul li {
+.project p {
     font-size: 1.2em;
     line-height: 1.6;
     color: #000;
 }
 
-.experience ul {
+.project ul {
     list-style-type: disc;
     padding-left: 20px;
 }
 
-.experience ul li {
+.project ul li {
+    font-size: 1.2em;
     margin-bottom: 10px;
 }
 
@@ -813,23 +819,23 @@ body[data-theme='dark'] #portfolio h2:hover {
     color: #7d2ae8; /* Hover color for dark mode */
 }
 
-body[data-theme='dark'] .experience h3:hover {
+body[data-theme='dark'] .project h3:hover {
     color: #5c1db6;
     font-size: 1.8em;
     margin-bottom: 10px;
 }
 
-body[data-theme='dark'] .experience p, 
-body[data-theme='dark'] .experience ul li {
+body[data-theme='dark'] .project p, 
+body[data-theme='dark'] .project ul li {
     color: #e0e0e0;
 }
 
-body[data-theme='dark'] .experience ul {
+body[data-theme='dark'] .project ul {
     list-style-type: disc;
     padding-left: 20px;
 }
 
-body[data-theme='dark'] .experience ul li {
+body[data-theme='dark'] .project ul li {
     margin-bottom: 10px;
 }
 
