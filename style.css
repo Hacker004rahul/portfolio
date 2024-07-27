@@ -751,6 +751,7 @@ body.night-mode .contact a {
     display: flex;
     }
 }
+/* Default light mode styles for #projects */
 #projects {
     padding: 60px 20px;
     background-color: #fff;
@@ -765,13 +766,13 @@ body.night-mode .contact a {
 #projects h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: #000; /* Default color for light mode */
+    color: #000; /* Light mode color */
     transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
 }
 
 /* Hover effect */
 #projects h2:hover {
-    color: #7d2ae8; /* Change color on hover */
+    color: #7d2ae8; /* Light mode hover color */
 }
 
 .project {
@@ -779,11 +780,11 @@ body.night-mode .contact a {
 }
 
 .project h3 {
-    color: #000; /* Default color for light mode */
+    color: #000; /* Light mode color */
 }
 
 .project h3:hover {
-    color: #5c1db6;
+    color: #5c1db6; /* Light mode hover color */
     font-size: 1.8em;
     margin-bottom: 10px;
 }
@@ -806,11 +807,11 @@ body.night-mode .contact a {
 
 /* Night mode styles for #projects */
 body.night-mode #projects {
-    background-color: #333;
+    background-color: #1c1c1c; /* Night mode background color */
 }
 
 body.night-mode #projects .content {
-    color: #ddd;
+    color: #ddd; /* Night mode text color */
 }
 
 body.night-mode #projects h2 {
@@ -818,7 +819,7 @@ body.night-mode #projects h2 {
 }
 
 body.night-mode #projects h2:hover {
-    color: #d8a3ff; /* Night mode hover color */
+    color: #7d2ae8; /* Night mode hover color */
 }
 
 body.night-mode .project h3 {
@@ -832,6 +833,7 @@ body.night-mode .project p {
 body.night-mode .project ul li {
     color: #ddd;
 }
+
   * {
     margin: 0;
     padding: 0;
