@@ -1,4 +1,5 @@
-/ Night Mode Initialization
+document.addEventListener('DOMContentLoaded', () => {
+    // Night Mode Initialization
     const nightModeToggle = document.getElementById('nightModeToggle');
     const isNightMode = localStorage.getItem('nightMode') === 'true';
 
