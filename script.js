@@ -1,16 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Night Mode Initialization
     const nightModeToggle = document.getElementById('nightModeToggle');
-    const isNightMode = localStorage.getItem('nightMode') === 'true';
-
-    if (isNightMode) {
-        document.body.classList.add('night-mode');
-    }
 
     nightModeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('night-mode');
-        localStorage.setItem('nightMode', document.body.classList.contains('night-mode'));
+        if (document.body.getAttribute('data-theme') === 'dark') {
+            document.body.removeAttribute('data-theme');
+            nightModeToggle.textContent = '🌙'; // Switch back to light mode icon
+        } else {
+            document.body.setAttribute('data-theme', 'dark');
+            nightModeToggle.textContent = '🌕'; // Switch to dark mode icon
+        }
     });
+});
+
 
     // Create Scene for 3D Model
     const scene = new THREE.Scene();
@@ -292,33 +293,3 @@ document.addEventListener("DOMContentLoaded", function() {
         return Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2);
     }
 })();
-formbutton("create", {
-  action: "https://formspree.io/f/mzzpdqdo",
-  title: "How can we help?",
-  fields: [
-    { 
-      type: "email", 
-      label: "Email:", 
-      name: "email",
-      required: true,
-      placeholder: "your@email.com"
-    },
-    {
-      type: "textarea",
-      label: "Message:",
-      name: "message",
-      placeholder: "What's on your mind?",
-    },
-    { type: "submit" }      
-  ],
-  styles: {
-    title: {
-      backgroundColor: "gray"
-    },
-    button: {
-      backgroundColor: "gray"
-    }
-  }
-});
-
-    
