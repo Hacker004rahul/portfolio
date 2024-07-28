@@ -347,7 +347,7 @@ header {
 .navigation a:hover {
   color: #7d2ae8; /* Keep hover color for visibility */
 }
-here is the rest of the code .logo {
+{
   color: #000; /* Set logo text color to black */
 }
 
@@ -742,7 +742,7 @@ body.night-mode .contact a {
     }
     
     .menu-toggle:hover {
-    display: block;
+    display: flex;
     color: #7d2ae8;
     }
     .navigation.active {
@@ -855,11 +855,6 @@ body.night-mode .contact a {
 }
 
 /* Responsive Adjustments for Projects Section */
-@media (max-width: 768px) {
-    #projects h2 {
-        font-size: 2em;
-    }
-}
   * {
     margin: 0;
     padding: 0;
@@ -915,17 +910,7 @@ body.night-mode .contact a {
   
   footer hr {
     margin: 2rem 0;
-  }
-  @media (max-width: 767px) {
-    .footer .content {
-      display: flex;
-      flex-direction: column;
-      font-size: 14px;
-    }
-    .footer {
-      position: unset;
-    }
-  }
+
   @media (min-width: 768px) and (max-width: 1024px) {
     .footer .content,
     .footer {
