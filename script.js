@@ -25,12 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     gsap.from('.skills .skill', { duration: 1, opacity: 0, y: 50, stagger: 0.2, ease: 'power2.out' });
     gsap.from('.contact .content', { duration: 1, opacity: 0, y: 50, ease: 'power2.out' });
 
-    // Toggle Mobile Menu
-    const toggleButton = document.querySelector('.menu-toggle');
-    const navigation = document.querySelector('.navigation');
-    toggleButton.addEventListener('click', () => {
-        navigation.classList.toggle('active');
-    });
+  
 
     // Night Mode Toggle
     const nightModeToggle = document.getElementById('nightModeToggle');
