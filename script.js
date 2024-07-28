@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    typingElement.textContent = ""; // Clear the initial content
+    typingElement.textContent = "A BCA Student"; // Clear the initial content
     typeWriter();
 
     // Canvas Animation
