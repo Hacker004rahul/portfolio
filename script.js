@@ -39,6 +39,12 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.toggle('night-mode');
         localStorage.setItem('nightMode', document.body.classList.contains('night-mode'));
     });
+// Toggle Mobile Menu
+const toggleButton = document.querySelector('.toggle');
+const navigation = document.querySelector('.navigation');
+toggleButton.addEventListener('click', () => {
+    navigation.classList.toggle('active');
+});
 
     // Typing Effect
     const typingElement = document.getElementById('typing-effect');
