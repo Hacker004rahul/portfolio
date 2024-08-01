@@ -753,176 +753,13 @@ body.night-mode .contact a {
 /* Light Mode */
 /* Light Mode */
 /* Light Mode (Default) */
-#portfolio {
-    padding: 60px 20px;
-    background-color: #fff; /* Light mode background color */
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#portfolio .content {
-    max-width: 800px;
-    color: #000; /* Light mode text color */
-    margin: 0 auto;
-}
-
-#portfolio h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #000; /* Default color for light mode */
-    transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
-}
-
-#portfolio h2:hover {
-    color: #7d2ae8; /* Hover color for light mode */
-}
-
-.project {
-    margin-bottom: 30px;
-}
-
-.project h3 {
-    font-size: 1.8em;
-    color: #333; /* Default color for project headings */
-    margin-bottom: 10px;
-}
-
-.project p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    color: #000; /* Default color for light mode */
-}
-
-.project ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-
-.project ul li {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
-.experience h3, .experience p strong {
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-.experience h3:hover,
-.experience p strong:hover {
-    background-color: #f0f0f0; /* Light background on hover */
-    color: #7d2ae8; /* Text color on hover */
-    cursor: pointer; /* Change cursor to pointer */
-    padding: 0 5px; /* Add some padding for visual effect */
-}
-
-/* Dark Mode */
-[data-theme='dark'] #portfolio {
-    background-color: #1e1e1e; /* Dark mode background color */
-}
-
-[data-theme='dark'] #portfolio .content {
-    color: #e0e0e0; /* Dark mode text color */
-}
-
-[data-theme='dark'] #portfolio h2 {
-    color: #e0e0e0; /* Default color for dark mode */
-}
-
-[data-theme='dark'] #portfolio h2:hover {
-    color: #7d2ae8; /* Hover color for dark mode */
-}
-
-[data-theme='dark'] .project {
-    margin-bottom: 30px;
-}
-
-[data-theme='dark'] .project h3 {
-    color: #e0e0e0; /* Color for project headings in dark mode */
-}
-
-[data-theme='dark'] .project p {
-    color: #e0e0e0; /* Default color for paragraphs in dark mode */
-}
-
-[data-theme='dark'] .project ul li {
-    color: #e0e0e0; /* Color for list items in dark mode */
-}
-
-[data-theme='dark'] .experience h3:hover,
-[data-theme='dark'] .experience p strong:hover {
-    background-color: #333; /* Dark background on hover */
-    color: #7d2ae8; /* Text color on hover */
-    cursor: pointer; /* Change cursor to pointer */
-    padding: 0 5px; /* Add some padding for visual effect */
-}
-
-/* Responsive Adjustments for Projects Section */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  .footer {
-    background-color: black;
-    color: #fefefe;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-  }
-  
-  .footer .heading {
-    color: #fefefe;
-    max-width: 1010px;
-    width: 90%;
-    text-transform: uppercase;
-    margin: 0 auto;
-    margin-bottom: 3rem;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  }
-  
-  .footer .content {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 1.5rem;
-  }
-  
-  .footer .content p {
-    margin-bottom: 1.3rem;
-  }
-  
-  .footer .content a {
-    text-decoration: none;
-    color: #fefefe;
-  }
-  
-  .footer .content a:hover {
-    border-bottom: 1px solid #971717;
-  }
-  
-  .footer .content h4 {
-    margin-bottom: 1.3rem;
-    font-size: 19px;
-  }
-  
-  footer {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
-  footer hr {
-    margin: 2rem 0;
-
-  @media (min-width: 768px) and (max-width: 1024px) {
-    .footer .content,
-    .footer {
-      font-size: 14px;
-    }
-  }
-  @media (orientation: landscape) and (max-height: 500px) {
-    .footer {
-      position: unset;
-    }
-  }
-/* Common Styles */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -931,10 +768,179 @@ body.night-mode .contact a {
 }
 
 /* Light Mode */
+#portfolio {
+  padding: 60px 20px;
+  background-color: #fff; /* Light mode background color */
+}
+
+#portfolio .content {
+  max-width: 800px;
+  color: #000; /* Light mode text color */
+  margin: 0 auto;
+}
+
+#portfolio h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #000; /* Default color for light mode */
+  transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+}
+
+#portfolio h2:hover {
+  color: #7d2ae8; /* Hover color for light mode */
+}
+
+.project {
+  margin-bottom: 30px;
+}
+
+.project h3 {
+  font-size: 1.8em;
+  color: #333; /* Default color for project headings */
+  margin-bottom: 10px;
+}
+
+.project p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #000; /* Default color for light mode */
+}
+
+.project ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.project ul li {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.experience h3,
+.experience p strong {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.experience h3:hover,
+.experience p strong:hover {
+  background-color: #f0f0f0; /* Light background on hover */
+  color: #7d2ae8; /* Text color on hover */
+  cursor: pointer; /* Change cursor to pointer */
+  padding: 0 5px; /* Add some padding for visual effect */
+}
+
+/* Dark Mode */
+[data-theme='dark'] #portfolio {
+  background-color: #1e1e1e; /* Dark mode background color */
+}
+
+[data-theme='dark'] #portfolio .content {
+  color: #e0e0e0; /* Dark mode text color */
+}
+
+[data-theme='dark'] #portfolio h2 {
+  color: #e0e0e0; /* Default color for dark mode */
+}
+
+[data-theme='dark'] #portfolio h2:hover {
+  color: #7d2ae8; /* Hover color for dark mode */
+}
+
+[data-theme='dark'] .project {
+  margin-bottom: 30px;
+}
+
+[data-theme='dark'] .project h3 {
+  color: #e0e0e0; /* Color for project headings in dark mode */
+}
+
+[data-theme='dark'] .project p {
+  color: #e0e0e0; /* Default color for paragraphs in dark mode */
+}
+
+[data-theme='dark'] .project ul li {
+  color: #e0e0e0; /* Color for list items in dark mode */
+}
+
+[data-theme='dark'] .experience h3:hover,
+[data-theme='dark'] .experience p strong:hover {
+  background-color: #333; /* Darker background on hover in night mode */
+  color: #7d2ae8; /* Color change on hover in night mode */
+}
+
+/* Footer Styles */
+.footer {
+  background-color: black;
+  color: #fefefe;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.footer .heading {
+  color: #fefefe;
+  max-width: 1010px;
+  width: 90%;
+  text-transform: uppercase;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.footer .content {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1.5rem;
+}
+
+.footer .content p {
+  margin-bottom: 1.3rem;
+}
+
+.footer .content a {
+  text-decoration: none;
+  color: #fefefe;
+}
+
+.footer .content a:hover {
+  border-bottom: 1px solid #971717;
+}
+
+.footer .content h4 {
+  margin-bottom: 1.3rem;
+  font-size: 19px;
+}
+
+footer {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+footer hr {
+  margin: 2rem 0;
+}
+
+/* Responsive Adjustments for Footer */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .footer .content,
+  .footer {
+    font-size: 14px;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .footer {
+    position: unset;
+  }
+}
+
+/* Education, Experience, Projects Section Styles */
 #education, #experience, #projects {
   padding: 60px 20px;
   background-color: #f4f4f4; /* Light mode background color */
   color: #000; /* Light mode text color */
+  text-align: center; /* Center the text */
 }
 
 #education h2, #experience h2, #projects h2 {
@@ -984,11 +990,6 @@ body[data-theme='dark'] .experience p strong:hover {
   color: #7d2ae8; /* Color change on hover in day mode */
 }
 
-/* Centering Content */
-#education, #experience, #projects {
-  text-align: center; /* Center the text */
-}
-
 #projects .project-card {
   text-align: center; /* Center the text inside the card */
   background-color: #fff; /* Light mode background color */
@@ -1003,4 +1004,3 @@ body[data-theme='dark'] #projects .project-card h3,
 body[data-theme='dark'] #projects .project-card p {
   color: #fff; /* Dark mode text color */
 }
-
