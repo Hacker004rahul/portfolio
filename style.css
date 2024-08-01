@@ -752,7 +752,6 @@ body.night-mode .contact a {
 /* Default light mode styles for #projects */
 /* Light Mode */
 /* Light Mode */
-/* Light Mode (Default) */
 /* General Styles */
 * {
   margin: 0;
@@ -864,8 +863,8 @@ body.night-mode .contact a {
 
 [data-theme='dark'] .experience h3:hover,
 [data-theme='dark'] .experience p strong:hover {
-  background-color: #333; /* Darker background on hover in night mode */
-  color: #7d2ae8; /* Color change on hover in night mode */
+  background-color: #333; /* Darker background on hover in dark mode */
+  color: #7d2ae8; /* Color change on hover in dark mode */
 }
 
 /* Footer Styles */
@@ -921,20 +920,6 @@ footer hr {
   margin: 2rem 0;
 }
 
-/* Responsive Adjustments for Footer */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .footer .content,
-  .footer {
-    font-size: 14px;
-  }
-}
-
-@media (orientation: landscape) and (max-height: 500px) {
-  .footer {
-    position: unset;
-  }
-}
-
 /* Education, Experience, Projects Section Styles */
 #education, #experience, #projects {
   padding: 60px 20px;
@@ -979,8 +964,8 @@ body[data-theme='dark'] #projects p {
 body[data-theme='dark'] #projects .project-card:hover,
 body[data-theme='dark'] .experience h3:hover,
 body[data-theme='dark'] .experience p strong:hover {
-  background-color: #333; /* Darker background on hover in night mode */
-  color: #7d2ae8; /* Color change on hover in night mode */
+  background-color: #333; /* Darker background on hover in dark mode */
+  color: #7d2ae8; /* Color change on hover in dark mode */
 }
 
 #projects .project-card:hover,
@@ -1003,4 +988,32 @@ body[data-theme='dark'] #projects .project-card {
 body[data-theme='dark'] #projects .project-card h3,
 body[data-theme='dark'] #projects .project-card p {
   color: #fff; /* Dark mode text color */
+}
+
+/* Responsive Adjustments for Tablets and Smaller Desktops (min-width: 768px and max-width: 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  #portfolio h2 {
+    font-size: 2em; /* Adjust font size for tablets */
+  }
+
+  .project h3 {
+    font-size: 1.5em; /* Adjust font size for project headings */
+  }
+
+  .project p {
+    font-size: 1em; /* Adjust font size for project paragraphs */
+  }
+
+  .footer .content {
+    flex-direction: column; /* Stack footer content vertically on tablets */
+    align-items: center; /* Center align footer content */
+  }
+
+  .footer .content a {
+    margin-bottom: 0.5rem; /* Reduce spacing between links */
+  }
+  
+  #education h2, #experience h2, #projects h2 {
+    font-size: 2em; /* Adjust font size for section headings */
+  }
 }
