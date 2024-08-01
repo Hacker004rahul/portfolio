@@ -95,12 +95,18 @@ header {
 
 /* Night Mode Styles */
 body.night-mode {
-  background-color: #121212;
-  color: #e0e0e0;
+  --background-color: #121212;
+  --text-color: #e0e0e0;
+  --header-background: #1f1f1f;
+  --btn-background: #3a3a3a;
+  --btn-hover-background: #555;
+  --btn-hover-color: #fff;
+  --contact-background: #1e1e1e;
+  --contact-text-color: #b3b3b3;
 }
 
 body.night-mode header {
-  background-color: #1f1f1f;
+  background-color: var(--header-background);
 }
 
 body.night-mode .home {
@@ -110,9 +116,45 @@ body.night-mode .home {
 body.night-mode .home h2,
 body.night-mode .home h3,
 body.night-mode .home p {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
+body.night-mode .skills,
+body.night-mode .skills-section {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+body.night-mode .skills .skill i,
+body.night-mode .skills .skill h3,
+body.night-mode .skills .skill ul li {
+  color: var(--text-color);
+}
+
+body.night-mode .contact {
+  background-color: var(--contact-background);
+}
+
+body.night-mode .contact-info {
+  color: var(--contact-text-color);
+}
+
+body.night-mode .contact-info a {
+  color: var(--text-color);
+}
+
+body.night-mode .btn-group a,
+body.night-mode button {
+  background-color: var(--btn-background);
+  color: var(--text-color);
+}
+
+body.night-mode .btn-group a:hover {
+  background-color: var(--btn-hover-background);
+  color: var(--btn-hover-color);
+}
+
+/* Skills Section */
 .skills {
   padding: 60px 20px;
   background-color: #f4f4f4;
@@ -332,70 +374,4 @@ body.night-mode .home p {
   left: 0;
   text-align: center;
   padding: 10px;
-}
-
-/* Night Mode Styles */
-body.night-mode {
-  --background-color: #121212;
-  --text-color: #e0e0e0;
-  --header-background: #1f1f1f;
-  --btn-background: #3a3a3a;
-  --btn-hover-background: #555;
-  --btn-hover-color: #fff;
-  --contact-background: #1e1e1e;
-  --contact-text-color: #b3b3b3;
-}
-
-body.night-mode header {
-  background-color: var(--header-background);
-}
-
-body.night-mode .home {
-  background-color: #1e1e1e;
-}
-
-body.night-mode .home h2,
-body.night-mode .home h3,
-body.night-mode .home p {
-  color: var(--text-color);
-}
-
-body.night-mode .skills,
-body.night-mode .skills-section {
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
-
-body.night-mode .skills .skill i,
-body.night-mode .skills .skill h3,
-body.night-mode .skills .skill ul li {
-  color: var(--text-color);
-}
-
-body.night-mode .contact {
-  background-color: var(--contact-background);
-}
-
-body.night-mode .contact-info {
-  color: var(--contact-text-color);
-}
-
-body.night-mode .contact-info a {
-  color: var(--text-color);
-}
-
-body.night-mode .btn-group a,
-body.night-mode button {
-  background-color: var(--btn-background);
-  color: var(--text-color);
-}
-
-body.night-mode .btn-group a:hover {
-  background-color: var(--btn-hover-background);
-  color: var(--btn-hover-color);
-}
-
-.footer {
-  background-color: #000;
-  color: #fff;
 }
