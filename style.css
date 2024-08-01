@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
 
+/* General Styles */
 * {
   margin: 0;
   padding: 0;
@@ -19,6 +20,7 @@ body {
   background-repeat: no-repeat; /* Prevents repeating the image */
 }
 
+/* Header */
 header {
   position: fixed;
   top: 0;
@@ -64,22 +66,19 @@ header {
   display: none;
 }
 
+/* Home Section */
 .home {
   width: 100%;
   height: 100vh;
   background-image: url("./images/background.jpg");
-  background-size: 200px 200px; /* Ensure image covers the section */
-  background-position: center right; /* Center the image */
+  background-size: cover; /* Ensure image covers the section */
+  background-position: center; /* Center the image */
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 30px;
   text-align: center;
-}
-.home {
-  background-color: #fff;
-  color: ##1e1e1e;
 }
 
 .home h2 {
@@ -106,84 +105,12 @@ body.night-mode header {
 
 body.night-mode .home {
   background-color: #1e1e1e;
-  color: #e0e0e0;
 }
 
-body.night-mode .home h2 {
-  color: #e0e0e0;
-}
-
-body.night-mode .home h3 {
-  color: #ccc;
-}
-
+body.night-mode .home h2,
+body.night-mode .home h3,
 body.night-mode .home p {
-  color: #aaa;
-}
-.content {
-  max-width: 600px;
-}
-
-.content h2 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
-  color: #000000;
-}
-
-.content h2 span {
-  color: #7d2ae8;
-}
-
-.content h3 {
-  font-size: 1.5em;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.content p {
-  margin-bottom: 30px;
-  color: #000;
-}
-
-.btn-group a {
-  color: #fff;
-  text-decoration: none;
-  padding: 10px 30px;
-  background: #7d2ae8;
-  border-radius: 30px;
-  margin: 10px;
-  border: 2px solid transparent;
-  transition: all 0.3s ease-in-out;
-}
-
-.btn-group a:hover {
-  background: transparent;
-  color: #7d2ae8;
-  border: 2px solid #7d2ae8;
-}
-
-.social-icons {
-  margin-top: 20px;
-}
-
-.social-icons a {
-  display: inline-block;
-  width: 35px;
-  height: 35px;
-  background: #7d2ae8;
-  border-radius: 50%;
-  margin-right: 10px;
-  text-align: center;
-  line-height: 35px;
-  color: #fff;
-  transition: all 0.3s ease-in-out;
-}
-
-.social-icons a:hover {
-  transform: translateY(-5px);
-  background: #ffffff;
-  color: #7d2ae8;
-  border: 1px solid #7d2ae8;
+  color: #e0e0e0;
 }
 
 .skills {
@@ -264,6 +191,7 @@ body.night-mode .home p {
   text-decoration: underline;
 }
 
+/* Responsive Styles */
 @media (max-width: 768px) {
   .navigation {
     display: none;
@@ -299,137 +227,39 @@ body.night-mode .home p {
   }
 }
 
-/* Night mode styles */
-body.night-mode {
-  background-color: #121212;
-  color: #e0e0e0;
-}
-
-header {
-  background-color: var(--header-background);
-}
-
+/* Button Styles */
 .btn-group a {
-  background: var(--btn-background);
+  display: inline-block;
+  padding: 10px 30px;
+  border: 2px solid transparent;
+  border-radius: 100px;
+  background-color: #7d2ae8;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: 500;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .btn-group a:hover {
-  background: var(--btn-hover-background);
-  color: var(--btn-hover-color);
-}
-
-.contact {
-  background-color: var(--contact-background);
-}
-
-.contact-info {
-  color: var(--contact-text-color);
-}
-
-.skills {
-  background-color: #333;
-  color: #fff;
-}
-
-.skills .skill {
-  border: 1px solid #555;
-}
-
-/* Navbar Styles */
-header {
-  background-color: var(--header-background);
-}
-
-.navigation a {
-  color: #000; /* Set text color to black */
-}
-
-.navigation a:hover {
-  color: #7d2ae8; /* Keep hover color for visibility */
-}
-{
-  color: #000; /* Set logo text color to black */
-}
-
-/* Centering for 'Skills' section */
-.skills-section {
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  flex-direction: column; /* Stack content vertically */
-  padding: 60px 20px;
-  text-align: center; /* Center text */
-  background-color: #f4f4f4; /* Background color for contrast */
-}
-
-.skills-content {
-  max-width: 1000px; /* Ensure content is not too wide */
-}
-
-.skills-content h1 {
-  font-size: 2.5em;
-  margin-bottom: 30px;
-}
-
-.skill {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
-.skill i {
-  font-size: 3em;
+  background-color: transparent;
   color: #7d2ae8;
-  margin-bottom: 10px;
+  border: 2px solid #7d2ae8;
+  transform: scale(1.05);
 }
 
-.skill h3 {
-  font-size: 1.8em;
-  margin-bottom: 10px;
-}
-
-.skill ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.skill ul li {
-  font-size: 1.2em;
-  margin-bottom: 10px;
-}
-
-.skill ul li i {
-  margin-right: 10px;
-}
-
-/* Responsive adjustments for the 'Skills' section */
-@media (max-width: 768px) {
-  .skills-content h1 {
-    font-size: 2em;
-  }
-
-  .skill i {
-    font-size: 2.5em;
-  }
-
-  .skill h3 {
-    font-size: 1.5em;
-  }
-}
-
-/* Styling for 'About' section */
+/* About Section */
 .about {
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  justify-content: center;
+  align-items: center;
   padding: 60px 20px;
-  background-color: #e9ecef; /* Light background color */
-  text-align: center; /* Center text */
+  background-color: #e9ecef;
+  text-align: center;
 }
 
 .about .content {
-  max-width: 800px; /* Limit content width */
+  max-width: 800px;
 }
 
 .about h2 {
@@ -440,353 +270,30 @@ header {
 .about p {
   font-size: 1.2em;
   line-height: 1.6;
-  color: #333; /* Dark text color for readability */
-}
-
-/* Responsive adjustments for the 'About' section */
-@media (max-width: 768px) {
-  .about h2 {
-    font-size: 2em;
-  }
-
-  .about p {
-    font-size: 1em;
-  }
-}
-/* Default button styling */
-.contact form button {
-  padding: 15px 30px;
-  border: none;
-  border-radius: 5px;
-  background-color: #7d2ae8; /* Background color */
-  color: #fff; /* Text color */
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-  font-size: 1em; /* Ensure font size is visible */
-  font-weight: 500; /* Add some weight to the text */
-}
-
-/* Hover effect */
-.contact form button:hover {
-  background-color: #003366; /* Darker background on hover */
-  transform: scale(1.05); /* Slightly scale up on hover for better visibility */
-}
-
-/* Night mode adjustments */
-body.night-mode .contact form button {
-  background-color: #7d2ae8; /* Background color in night mode */
-  color: #e0e0e0; /* Text color in night mode */
-}
-
-body.night-mode .contact form button:hover {
-  background-color: #003366; /* Darker background on hover in night mode */
-}
-/* Default button styling for common buttons */
-.btn-group a {
-  display: inline-block;
-  padding: 10px 30px;
-  border: 2px solid transparent;
-  border-radius: 100px;
-  background-color: #7d2ae8; /* Background color */
-  color: #fff; /* Text color */
-  text-decoration: none;
-  font-size: 1em;
-  font-weight: 500;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
-    transform 0.3s ease-in-out;
-}
-
-/* Hover effect for common buttons */
-.btn-group a:hover {
-  background-color: transparent; /* Background color on hover */
-  color: #7d2ae8; /* Text color on hover */
-  border: 2px solid #7d2ae8; /* Border color on hover */
-  transform: scale(1.05); /* Slightly scale up on hover */
-}
-
-/* Night mode adjustments for common buttons */
-body.night-mode .btn-group a {
-  background-color: #7d2ae8; /* Background color in night mode */
-  color: #e0e0e0; /* Text color in night mode */
-}
-
-body.night-mode .btn-group a:hover {
-  background-color: transparent; /* Background color on hover in night mode */
-  color: #7d2ae8; /* Text color on hover in night mode */
-  border: 2px solid #7d2ae8; /* Border color on hover in night mode */
-}
-/* Default navbar styles */
-.navigation a,
-.logo {
-  color: #fff; /* Black color in normal mode */
-  transition: color 0.3s ease-in-out; /* Smooth transition for color change */
-}
-
-/* Hover effect */
-.navigation a:hover,
-.logo:hover {
-  color: #7d2ae8; /* Hover color */
-}
-
-/* Night mode styles */
-body.night-mode .navigation a,
-body.night-mode .logo {
-  color: #fff; /* White color in night mode */
-}
-
-/* Night mode hover effect */
-body.night-mode .navigation a:hover,
-body.night-mode .logo:hover {
-  color: #7d2ae8; /* Retain hover color for visibility */
-}
-.form-group {
-  margin-bottom: 15px;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-input,
-textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 5px 0;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-
-button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: #7d2ae8;
-  color: #fff;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-}
-
-button:hover {
-  background-color: #5c1db6;
-}
-/* General night mode styling */
-body.night-mode {
-  --background-color: #121212; /* Dark background color */
-  --text-color: #e0e0e0; /* Light text color */
-  --header-background: #1f1f1f; /* Dark header background */
-  --btn-background: #3a3a3a; /* Dark button background */
-  --btn-hover-background: #555; /* Button hover background */
-  --btn-hover-color: #fff; /* Button hover text color */
-  --contact-background: #1e1e1e; /* Dark contact section background */
-  --contact-text-color: #b3b3b3; /* Light contact text color */
-}
-
-/* Night mode styles for 'About' section */
-body.night-mode .about {
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
-
-body.night-mode .about h2 {
-  color: var(--text-color);
-}
-
-body.night-mode .about p {
-  color: var(--text-color);
-}
-
-/* Night mode styles for 'Skills' section */
-body.night-mode .skills-section,
-body.night-mode .skills {
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
-
-body.night-mode .skills-section h1,
-body.night-mode .skill h3,
-body.night-mode .skill ul li {
-  color: var(--text-color);
-}
-
-/* Night mode styles for navbar */
-body.night-mode header {
-  background-color: var(--header-background);
-}
-
-body.night-mode .navigation a {
-  color: var(--text-color);
-}
-
-/* Night mode button styling */
-body.night-mode .btn-group a,
-body.night-mode button {
-  background-color: var(--btn-background);
-  color: var(--text-color);
-}
-
-body.night-mode .btn-group a:hover,
-body.night-mode button:hover {
-  background-color: var(--btn-hover-background);
-  color: var(--btn-hover-color);
-}
-
-/* Night mode for contact section */
-body.night-mode .contact {
-  background-color: var(--contact-background);
-}
-
-body.night-mode .contact-info {
-  color: var(--contact-text-color);
-}
-
-body.night-mode .contact-info a {
-  color: var(--text-color);
-}
-.large-header {
-  position: relative;
-  width: 100%;
-  background: #333;
-  overflow: hidden;
-  background-size: cover;
-  background-position: center center;
-  z-index: 1;
-}
-#large-header {
-  background-image: url("https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/img/demo-1-bg.jpg");
-  background-position: 100%;
-}
-.main-title {
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  color: #7d2ae8;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate3d(-50%, -50%, 0);
-  transform: translate3d(-50%, -50%, 0);
-}
-.demo-1 .main-title {
-  text-transform: uppercase;
-  font-size: 4.2em;
-  letter-spacing: 0.1em;
-}
-.main-title .thin {
-  font-weight: 200;
-  color: #fff;
-}
-@media only screen and (max-width: 768px) {
-  .demo-1 .main-title {
-    font-size: 3em;
-  }
-}
-.contact {
-  background-color: #fff;
   color: #333;
 }
 
-.contact h2 {
-  color: #333;
-}
-
-.contact p {
-  color: #666;
-}
-
-.contact a {
-  color: #0066cc;
-}
-
-/* Night Mode Styles */
-body.night-mode .contact {
-  background-color: #1e1e1e;
-  color: #e0e0e0;
-}
-
-body.night-mode .contact h2 {
-  color: #e0e0e0;
-}
-
-body.night-mode .contact p {
-  color: #aaa;
-}
-
-body.night-mode .contact a {
-  color: #66aaff;
-}
-  .navigation.active {
-    display: flex;
-  }
-  @media (max-width: 768px) {
-    .navigation {
-      display: none; /* Hide navigation by default */
-    }
-  
-    .navigation.active {
-      display: flex;
-    }
-  }
-  .menu-toggle {
-    display: none;
-  }
-  
-  .navigation {
-    display: flex;
-  }
-  
-  @media (max-width: 768px) {
-    .navigation {
-      display: none;
-      flex-direction: column;
-    }
-    
-    .menu-toggle:hover {
-    display: flex;
-    color: #7d2ae8;
-    }
-    .navigation.active {
-    display: flex;
-    }
-}
-/* Default light mode styles for #projects */
-/* Light Mode */
-/* Light Mode */
-/* General Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  text-align: center;
-}
-
-/* Light Mode */
+/* Portfolio Section */
 #portfolio {
   padding: 60px 20px;
-  background-color: #fff; /* Light mode background color */
+  background-color: #fff;
 }
 
 #portfolio .content {
   max-width: 800px;
-  color: #000; /* Light mode text color */
+  color: #000;
   margin: 0 auto;
 }
 
 #portfolio h2 {
   font-size: 2.5em;
   margin-bottom: 20px;
-  color: #000; /* Default color for light mode */
-  transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+  color: #000;
+  transition: color 0.3s ease-in-out;
 }
 
 #portfolio h2:hover {
-  color: #7d2ae8; /* Hover color for light mode */
+  color: #7d2ae8;
 }
 
 .project {
@@ -795,14 +302,14 @@ body.night-mode .contact a {
 
 .project h3 {
   font-size: 1.8em;
-  color: #333; /* Default color for project headings */
+  color: #333;
   margin-bottom: 10px;
 }
 
 .project p {
   font-size: 1.2em;
   line-height: 1.6;
-  color: #000; /* Default color for light mode */
+  color: #000;
 }
 
 .project ul {
@@ -815,58 +322,6 @@ body.night-mode .contact a {
   margin-bottom: 10px;
 }
 
-.experience h3,
-.experience p strong {
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-.experience h3:hover,
-.experience p strong:hover {
-  background-color: #f0f0f0; /* Light background on hover */
-  color: #7d2ae8; /* Text color on hover */
-  cursor: pointer; /* Change cursor to pointer */
-  padding: 0 5px; /* Add some padding for visual effect */
-}
-
-/* Dark Mode */
-[data-theme='dark'] #portfolio {
-  background-color: #1e1e1e; /* Dark mode background color */
-}
-
-[data-theme='dark'] #portfolio .content {
-  color: #e0e0e0; /* Dark mode text color */
-}
-
-[data-theme='dark'] #portfolio h2 {
-  color: #e0e0e0; /* Default color for dark mode */
-}
-
-[data-theme='dark'] #portfolio h2:hover {
-  color: #7d2ae8; /* Hover color for dark mode */
-}
-
-[data-theme='dark'] .project {
-  margin-bottom: 30px;
-}
-
-[data-theme='dark'] .project h3 {
-  color: #e0e0e0; /* Color for project headings in dark mode */
-}
-
-[data-theme='dark'] .project p {
-  color: #e0e0e0; /* Default color for paragraphs in dark mode */
-}
-
-[data-theme='dark'] .project ul li {
-  color: #e0e0e0; /* Color for list items in dark mode */
-}
-
-[data-theme='dark'] .experience h3:hover,
-[data-theme='dark'] .experience p strong:hover {
-  background-color: #333; /* Darker background on hover in dark mode */
-  color: #7d2ae8; /* Color change on hover in dark mode */
-}
-
 /* Footer Styles */
 .footer {
   background-color: black;
@@ -875,145 +330,72 @@ body.night-mode .contact a {
   width: 100%;
   bottom: 0;
   left: 0;
-}
-
-.footer .heading {
-  color: #fefefe;
-  max-width: 1010px;
-  width: 90%;
-  text-transform: uppercase;
-  margin: 0 auto;
-  margin-bottom: 3rem;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
-
-.footer .content {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 1.5rem;
-}
-
-.footer .content p {
-  margin-bottom: 1.3rem;
-}
-
-.footer .content a {
-  text-decoration: none;
-  color: #fefefe;
-}
-
-.footer .content a:hover {
-  border-bottom: 1px solid #971717;
-}
-
-.footer .content h4 {
-  margin-bottom: 1.3rem;
-  font-size: 19px;
-}
-
-footer {
   text-align: center;
-  margin-bottom: 2rem;
+  padding: 10px;
 }
 
-footer hr {
-  margin: 2rem 0;
+/* Night Mode Styles */
+body.night-mode {
+  --background-color: #121212;
+  --text-color: #e0e0e0;
+  --header-background: #1f1f1f;
+  --btn-background: #3a3a3a;
+  --btn-hover-background: #555;
+  --btn-hover-color: #fff;
+  --contact-background: #1e1e1e;
+  --contact-text-color: #b3b3b3;
 }
 
-/* Education, Experience, Projects Section Styles */
-#education, #experience, #projects {
-  padding: 60px 20px;
-  background-color: #f4f4f4; /* Light mode background color */
-  color: #000; /* Light mode text color */
-  text-align: center; /* Center the text */
+body.night-mode header {
+  background-color: var(--header-background);
 }
 
-#education h2, #experience h2, #projects h2 {
-  font-size: 2.5em;
-  margin-bottom: 30px;
+body.night-mode .home {
+  background-color: #1e1e1e;
 }
 
-#education p, #experience p, #projects p {
-  color: #000; /* Light mode text color */
+body.night-mode .home h2,
+body.night-mode .home h3,
+body.night-mode .home p {
+  color: var(--text-color);
 }
 
-#education h3, #experience h3, #projects h3 {
-  color: #000; /* Light mode headings color */
+body.night-mode .skills,
+body.night-mode .skills-section {
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
-/* Dark Mode */
-body[data-theme='dark'] #education,
-body[data-theme='dark'] #experience,
-body[data-theme='dark'] #projects {
-  background-color: #1e1e1e; /* Dark mode background color */
-  color: #fff; /* Dark mode text color */
+body.night-mode .skills .skill i,
+body.night-mode .skills .skill h3,
+body.night-mode .skills .skill ul li {
+  color: var(--text-color);
 }
 
-body[data-theme='dark'] #education h2,
-body[data-theme='dark'] #experience h2,
-body[data-theme='dark'] #projects h2 {
-  color: #fff; /* Dark mode headings color */
+body.night-mode .contact {
+  background-color: var(--contact-background);
 }
 
-body[data-theme='dark'] #education p,
-body[data-theme='dark'] #experience p,
-body[data-theme='dark'] #projects p {
-  color: #fff; /* Dark mode text color */
+body.night-mode .contact-info {
+  color: var(--contact-text-color);
 }
 
-body[data-theme='dark'] #projects .project-card:hover,
-body[data-theme='dark'] .experience h3:hover,
-body[data-theme='dark'] .experience p strong:hover {
-  background-color: #333; /* Darker background on hover in dark mode */
-  color: #7d2ae8; /* Color change on hover in dark mode */
+body.night-mode .contact-info a {
+  color: var(--text-color);
 }
 
-#projects .project-card:hover,
-#experience h3:hover,
-#experience p strong:hover {
-  background-color: #f0f0f0; /* Light background on hover in day mode */
-  color: #7d2ae8; /* Color change on hover in day mode */
+body.night-mode .btn-group a,
+body.night-mode button {
+  background-color: var(--btn-background);
+  color: var(--text-color);
 }
 
-#projects .project-card {
-  text-align: center; /* Center the text inside the card */
-  background-color: #fff; /* Light mode background color */
+body.night-mode .btn-group a:hover {
+  background-color: var(--btn-hover-background);
+  color: var(--btn-hover-color);
 }
 
-body[data-theme='dark'] #projects .project-card {
-  background-color: #2e2e2e; /* Dark mode background color */
-  color: #fff; /* Dark mode text color */
-}
-
-body[data-theme='dark'] #projects .project-card h3,
-body[data-theme='dark'] #projects .project-card p {
-  color: #fff; /* Dark mode text color */
-}
-
-/* Responsive Adjustments for Tablets and Smaller Desktops (min-width: 768px and max-width: 1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
-  #portfolio h2 {
-    font-size: 2em; /* Adjust font size for tablets */
-  }
-
-  .project h3 {
-    font-size: 1.5em; /* Adjust font size for project headings */
-  }
-
-  .project p {
-    font-size: 1em; /* Adjust font size for project paragraphs */
-  }
-
-  .footer .content {
-    flex-direction: column; /* Stack footer content vertically on tablets */
-    align-items: center; /* Center align footer content */
-  }
-
-  .footer .content a {
-    margin-bottom: 0.5rem; /* Reduce spacing between links */
-  }
-  
-  #education h2, #experience h2, #projects h2 {
-    font-size: 2em; /* Adjust font size for section headings */
-  }
+.footer {
+  background-color: #000;
+  color: #fff;
 }
