@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
 
 * {
@@ -78,7 +79,7 @@ header {
   text-align: center;
 }
 .home {
-  background-color: #fff;
+  background-color: #1e1e1e;
   color: #333;
 }
 
@@ -1003,3 +1004,4 @@ body[data-theme='dark'] #projects .project-card h3,
 body[data-theme='dark'] #projects .project-card p {
   color: #fff; /* Dark mode text color */
 }
+
