@@ -775,31 +775,18 @@ body.night-mode .contact a {
     color: #7d2ae8; /* Hover color for light mode */
 }
 
-.project {
-    margin-bottom: 30px;
+#projects {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
 }
 
-.project h3 {
-    font-size: 1.8em;
-    color: #333; /* Default color for project headings */
-    margin-bottom: 10px;
+#projects .content {
+    max-width: 1000px;
+    width: 100%;
+    text-align: center;
 }
 
-.project p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    color: #000; /* Default color for light mode */
-}
-
-.project ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-
-.project ul li {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
 
 .experience h3, .experience p strong {
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
