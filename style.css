@@ -173,7 +173,7 @@ section {
   color: #000;
 }
 
-/* ABOUT PAGE */
+/* ABOUT */
 .about {
   background: rgba(255,255,255,0.05);
   border-radius: 15px;
@@ -197,7 +197,7 @@ section {
   transform: translateY(-10px);
 }
 
-/* 🔥 PROJECTS */
+/* PROJECTS */
 .projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
@@ -226,37 +226,112 @@ section {
   color: #ccc;
 }
 
-/* HOVER */
 .project-box:hover {
   transform: translateY(-10px) scale(1.05);
   background: rgba(255,255,255,0.15);
 }
 
-/* CONTACT */
+/* ========================= */
+/* 🔥 PREMIUM CONTACT SECTION */
+/* ========================= */
+
 .contact-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 40px;
+  margin-top: 40px;
+  justify-content: center;
 }
 
+/* GLASS CARD */
 .contact-info-box,
 .contact-form-box {
   flex: 1;
-  min-width: 280px;
-  padding: 20px;
-  border-radius: 10px;
-  background: rgba(255,255,255,0.05);
+  min-width: 320px;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  transition: 0.4s;
+  border: 1px solid rgba(0,255,238,0.1);
+}
+
+/* HOVER */
+.contact-info-box:hover,
+.contact-form-box:hover {
+  transform: translateY(-10px) scale(1.02);
+  border: 1px solid #00ffee;
+}
+
+/* INFO */
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.info-item i {
+  color: #00ffee;
 }
 
 /* INPUT */
+.input-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
 .input-group input,
 .input-group textarea {
   width: 100%;
-  padding: 10px;
-  border-radius: 10px;
+  padding: 12px;
+  border-radius: 12px;
   border: none;
   background: rgba(255,255,255,0.1);
   color: #fff;
+  outline: none;
+}
+
+/* GLOW */
+.input-group input:focus,
+.input-group textarea:focus {
+  box-shadow: 0 0 10px #00ffee;
+}
+
+/* FLOAT LABEL */
+.input-group label {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  font-size: 13px;
+  color: #aaa;
+  transition: 0.3s;
+}
+
+.input-group input:focus + label,
+.input-group textarea:focus + label,
+.input-group input:valid + label,
+.input-group textarea:valid + label {
+  top: -8px;
+  font-size: 11px;
+  color: #00ffee;
+}
+
+/* BUTTON */
+.contact-form-box .btn {
+  width: 100%;
+}
+
+.contact-form-box .btn:hover {
+  transform: scale(1.05);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
 }
 
 /* NIGHT MODE */
