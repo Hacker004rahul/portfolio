@@ -47,7 +47,11 @@ Feel free to explore my portfolio to learn more about my projects, skills, and j
             </div>
         </div>
     </section>
-
+ <script>
+        gsap.from('.logo', {duration: 1, y: -50, opacity: 0, ease: 'bounce'});
+        gsap.from('.navigation a', {duration: 1, y: -30, opacity: 0, stagger: 0.2});
+        gsap.from('.content', {duration: 1, opacity: 0, delay: 0.5});
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     </script>
 </body>
