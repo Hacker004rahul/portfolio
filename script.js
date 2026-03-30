@@ -1,24 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   // =========================
-  // GSAP + ScrollTrigger SETUP
+  // GSAP SETUP
   // =========================
   if (typeof gsap !== "undefined") {
-    gsap.registerPlugin(ScrollTrigger);
+
+    if (typeof ScrollTrigger !== "undefined") {
+      gsap.registerPlugin(ScrollTrigger);
+    }
 
     // Navbar animation
     gsap.from('.logo', { y: -50, opacity: 0, duration: 1 });
     gsap.from('.navigation a', { y: -30, opacity: 0, stagger: 0.1 });
 
-    // Hero animation
-    gsap.from('.home .content', { y: 50, opacity: 0, duration: 1 });
+    // Content animation
+    gsap.from('.content', { y: 50, opacity: 0, duration: 1 });
 
-    // Scroll animations for sections
-    gsap.utils.toArray('.section').forEach(section => {
+    // Scroll animations (works for both pages)
+    gsap.utils.toArray('.section, section').forEach(section => {
       gsap.from(section, {
         scrollTrigger: {
           trigger: section,
-          start: "top 80%",
+          start: "top 85%",
         },
         opacity: 0,
         y: 60,
@@ -26,8 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Project cards animation
-    gsap.utils.toArray('.project').forEach(card => {
+    // 🔥 FIXED PROJECT ANIMATION (MAIN FIX)
+    gsap.utils.toArray('.project-box, .project').forEach(card => {
       gsap.from(card, {
         scrollTrigger: {
           trigger: card,
@@ -41,15 +44,15 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // =========================
-  // SMOOTH SCROLL (NAVIGATION)
+  // SMOOTH SCROLL
   // =========================
   document.querySelectorAll('.navigation a').forEach(link => {
     link.addEventListener('click', e => {
-      const targetId = link.getAttribute('href');
+      const href = link.getAttribute('href');
 
-      if (targetId.startsWith('#')) {
+      if (href.startsWith('#')) {
         e.preventDefault();
-        const target = document.querySelector(targetId);
+        const target = document.querySelector(href);
 
         if (target) {
           window.scrollTo({
@@ -62,9 +65,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // =========================
-  // NIGHT MODE (LOCAL STORAGE)
+  // NIGHT MODE
   // =========================
   const toggle = document.getElementById('nightModeToggle');
+
   if (toggle) {
     const savedMode = localStorage.getItem('nightMode');
 
@@ -79,9 +83,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // =========================
-  // MOBILE MENU TOGGLE
+  // MOBILE MENU (FIXED FOR .toggle)
   // =========================
-  const menuBtn = document.querySelector('.menu-toggle');
+  const menuBtn = document.querySelector('.menu-toggle, .toggle');
   const nav = document.querySelector('.navigation');
 
   if (menuBtn && nav) {
@@ -91,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // =========================
-  // TYPING EFFECT (SMOOTH)
+  // TYPING EFFECT
   // =========================
   const typingEl = document.getElementById('typing-effect');
 
@@ -112,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // =========================
-  // 🔥 APPLE-STYLE PARTICLE BACKGROUND
+  // CANVAS BACKGROUND (SAFE)
   // =========================
   const canvas = document.getElementById('demo-canvas');
 
