@@ -178,23 +178,5 @@
     </section>
 
     <script src="script.js"></script>
-    <script>
-        // GSAP Animations
-        gsap.registerPlugin(ScrollTrigger);
-        gsap.from(".project-box", {
-            scrollTrigger: { trigger: ".projects-container", start: "top 80%" },
-            y: 50, opacity: 0, duration: 0.8, stagger: 0.1
-        });
-
-        // Mobile Menu Toggle
-        document.querySelector('.menu-toggle').addEventListener('click', () => {
-            document.querySelector('.navigation').classList.toggle('active');
-        });
-
-        // Night Mode
-        document.getElementById('nightModeToggle').addEventListener('click', () => {
-            document.body.classList.toggle('night-mode');
-        });
-    </script>
 </body>
 </html>
