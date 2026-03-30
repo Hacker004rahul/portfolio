@@ -840,6 +840,133 @@ body.night-mode .contact a {
     padding: 0 5px; /* Add some padding for visual effect */
 }
 
+.contact {
+    padding: 80px 10%;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+}
+
+.contact-container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* BOX STYLE */
+.contact-info-box,
+.contact-form-box {
+    flex: 1;
+    min-width: 300px;
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    transition: 0.4s ease;
+}
+
+/* Hover Animation */
+.contact-info-box:hover,
+.contact-form-box:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+/* TEXT */
+.contact-info-box h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.contact-info-box p {
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+/* INFO ITEMS */
+.info-item {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    gap: 15px;
+}
+
+.info-item i {
+    font-size: 20px;
+    color: #00f7ff;
+}
+
+.info-item a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.info-item a:hover {
+    color: #00f7ff;
+}
+
+/* INPUT GROUP */
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    font-size: 14px;
+}
+
+/* FLOATING LABEL */
+.input-group label {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    color: #aaa;
+    font-size: 14px;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.input-group input:focus + label,
+.input-group textarea:focus + label,
+.input-group input:valid + label,
+.input-group textarea:valid + label {
+    top: -10px;
+    font-size: 12px;
+    color: #00f7ff;
+}
+
+/* BUTTON */
+.contact-form-box button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #00f7ff, #00c3ff);
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form-box button:hover {
+    background: linear-gradient(45deg, #00c3ff, #00f7ff);
+    transform: scale(1.05);
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+}
 /* Responsive Adjustments for Projects Section */
 @media (max-width: 768px) {
     #projects h2 {
